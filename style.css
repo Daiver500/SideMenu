@@ -1,10 +1,16 @@
-/* pt-mono - latin_cyrillic */
+/* roboto-regular - latin_cyrillic */
 @font-face {
-  font-family: "PTMono";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: local("PTMono"), url("fonts/pt-mono.woff2") format("woff2"), url("fonts/pt-mono.woff") format("woff"); }
+  src: local("Roboto"), url("fonts/roboto-regular.woff2") format("woff2"), url("fonts/roboto-regular.woff") format("woff"); }
+
+/* roboto-500 - latin_cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto"), url("fonts/roboto-500.woff2") format("woff2"), url("fonts/roboto-500.woff") format("woff"); }
 
 .visually-hidden {
   position: absolute;
@@ -20,7 +26,7 @@ a {
   text-decoration: none; }
 
 a:link {
-  color: green; }
+  color: #a1a1aa; }
 
 *,
 *::before,
@@ -35,52 +41,29 @@ img {
   display: none; }
 
 body {
-  font-family: "PTMono", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
   display: flex;
   flex-direction: column;
   min-height: 100vh; }
 
-.include {
-  display: none; }
-
 .main {
   flex-grow: 1; }
 
-.page__button {
-  font-family: "PTMono", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  color: #fff;
-  text-transform: uppercase;
-  background-color: #000;
-  border: 1px solid #000;
-  border-radius: 10px;
-  padding: 14px 45px;
-  cursor: pointer;
-  margin-bottom: 34px; }
-
-.page__button:hover,
-.page__button:focus {
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #000; }
-
 .container {
-  max-width: 1920px;
+  min-width: 320px;
   margin: 0 auto;
   padding: 0 10px; }
 
-@media (max-width: 1023px) {
+@media (min-width: 768px) {
   .container {
-    max-width: 1023px; } }
+    min-width: 768px; } }
 
-@media (max-width: 767px) {
+@media (min-width: 1024px) {
   .container {
-    max-width: 767px; } }
+    min-width: 1024px; } }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -387,34 +370,10 @@ template {
 [hidden] {
   display: none; }
 
-.main {
-  position: relative; }
+.side-menu {
+  background-color: #18181b; }
 
-.main__inner {
+.side-menu__header-wrapper {
   display: flex;
-  justify-content: center;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  left: 0; }
-
-.main__button {
-  font-family: "PTMono", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  color: #fff;
-  text-transform: uppercase;
-  background-color: #000;
-  border: 1px solid #000;
-  border-radius: 10px;
-  padding: 14px 45px;
-  cursor: pointer;
-  position: relative; }
-
-.main__button:hover,
-.main__button:focus {
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #000; }
+  background-color: #27272a; }
 
