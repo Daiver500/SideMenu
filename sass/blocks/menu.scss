@@ -1,10 +1,15 @@
 .side-menu {
   background-color: $one-more-color;
+  max-width: 767px;
+}
+
+.side-menu__header,
+.side-menu__footer {
+  background-color: $dark-grey;
 }
 
 .side-menu__header-wrapper {
   display: flex;
-  background-color: $dark-grey;
   padding-left: 22px;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -85,19 +90,37 @@
 
 .side-menu__item {
   padding-left: 16px;
+  position: relative;
+  align-items: center;
+}
+
+.side-menu__item:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  background-image: url("img/mail-dot-icon.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  top: 8px;
+  right: 20px;
 }
 
 .side-menu__link {
   font-weight: 400;
+  color: $light-light-grey;
 }
 
-.side-menu__link svg {
+.side-menu__svg {
   margin-right: 8px;
   color: $one-more-color;
 }
 
+.side-menu__svg path {
+  stroke: $light-grey;
+}
+
 .bottom-list {
-  margin-bottom: 160px;
+  margin-bottom: 150px;
 }
 
 .bottom-list::after {
@@ -162,6 +185,7 @@
 
 .side-menu__button-wrapper {
   margin-bottom: 24px;
+  position: relative;
 }
 
 .side-menu__project-button {
@@ -170,10 +194,10 @@
   border: none;
   border-radius: 5px;
   color: $white;
-  position: relative;
+  width: 100%;
 }
 
-.side-menu__project-button::before {
+.side-menu__button-wrapper::before {
   content: "";
   position: absolute;
   background-image: url("img/plus-icon.svg");
@@ -184,6 +208,61 @@
   left: 77px;
 }
 
+.side-menu__footer-wrapper {
+  display: flex;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  position: relative;
+}
+
+.side-menu__footer-wrapper::after {
+  content: "";
+  position: absolute;
+  background-image: url("img/dots-icon.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  top: 30px;
+  right: 24px;
+}
+
+.side-menu__footer-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+}
+
+.side-menu__footer-text,
+.side-menu__footer-title {
+  margin-top: 0;
+}
+
+.side-menu__footer-title {
+  margin-bottom: 2px;
+  color: $white;
+}
+
+.side-menu__footer-text {
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 16px;
+  color: $light-light-grey;
+}
+
+.side-menu__item--active {
+  background-color: $light-black;
+  border-radius: 5px;
+}
+
+.side-menu__link--active {
+  color: $white;
+}
+
+.side-menu__svg--active path {
+  stroke: $white;
+}
+
 .button {
   cursor: pointer;
 }
@@ -191,4 +270,67 @@
 .button:hover,
 .button:focus {
   opacity: 0.5;
+}
+
+.side-menu__checkbox {
+  margin-bottom: 20px;
+}
+
+.checkbox__label {
+  padding-left: 20px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+}
+
+.checkbox__input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.checkbox__box {
+  position: absolute;
+  width: 48px;
+  height: 26px;
+  margin-left: 0;
+  background-image: url("img/chekbox-active.jpg");
+  background-repeat: no-repeat;
+  left: 0;
+  top: 2px;
+  border-radius: 15px;
+}
+
+.checkbox__input:checked + .checkbox__box {
+  background-image: url("img/checkbox-not-active.jpg");
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+.checkbox__input:hover + .checkbox__box,
+.checkbox__input:focus + .checkbox__box {
+  border-radius: 15px;
+}
+
+.checkbox__input:checked:hover + .checkbox__box,
+.checkbox__input:checked:focus + .checkbox__box {
+  border-radius: 15px;
+}
+
+.checkbox__text {
+  display: none;
+  padding-left: 50px;
+  padding-top: 7px;
+  font-weight: 400;
+  color: $light-light-grey;
+}
+
+.checkbox__text--active {
+  display: block;
+}
+
+@media (min-width: $min-desktop-width) {
+  .side-menu {
+    display: none;
+  }
 }

@@ -13,10 +13,6 @@ a {
   text-decoration: none;
 }
 
-a:link {
-  color: $light-light-grey;
-}
-
 *,
 *::before,
 *::after {
@@ -37,11 +33,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
-  display: flex;
-  // flex-direction: column;
   min-height: 100vh;
 }
 
-// .side-menu {
-// flex-grow: 1;
-// }
+
