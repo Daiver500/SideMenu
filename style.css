@@ -49,6 +49,9 @@ body {
   margin: 0 auto;
   padding: 0 10px; }
 
+.container--active {
+  min-width: 80px; }
+
 @media (min-width: 768px) {
   .container {
     min-width: 768px; } }
@@ -366,6 +369,9 @@ template {
   background-color: #18181b;
   max-width: 767px; }
 
+.side-menu--open {
+  max-width: 80px; }
+
 .side-menu__header,
 .side-menu__footer {
   background-color: #27272a; }
@@ -390,7 +396,6 @@ template {
   width: 81px;
   height: 31px; }
 
-.side-menu__input-wrapper,
 .side-menu__list,
 .bottom__list,
 .side-menu__button-wrapper {
@@ -399,7 +404,9 @@ template {
 
 .side-menu__input-wrapper {
   margin-bottom: 16px;
-  position: relative; }
+  position: relative;
+  padding-left: 23px;
+  padding-right: 23px; }
 
 .side-menu__input-wrapper::before {
   content: "";
@@ -421,6 +428,11 @@ template {
   background-color: inherit;
   border-radius: 5px;
   padding-left: 40px; }
+
+.side-menu__input--small {
+  min-width: 10px;
+  padding-left: 28px;
+  width: 32px; }
 
 .side-menu__list {
   margin-top: 0;
@@ -456,7 +468,12 @@ template {
 
 .side-menu__link {
   font-weight: 400;
-  color: #a1a1aa; }
+  color: #a1a1aa;
+  background-color: #18181b;
+  border: none;
+  align-items: center;
+  padding-left: 0;
+  padding-right: 0; }
 
 .side-menu__svg {
   margin-right: 8px;
@@ -474,7 +491,9 @@ template {
 .bottom-list__item {
   position: relative;
   display: flex;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-bottom: 10px;
+  align-items: center; }
 
 .bottom-list__item:first-child {
   padding-left: 48px; }
@@ -495,14 +514,15 @@ template {
 .bottom-list__text {
   color: #a1a1aa;
   margin-top: 0;
-  font-weight: 400; }
+  font-weight: 400;
+  margin-bottom: 0; }
 
 .purple,
 .lime,
 .pink {
   width: 8px;
   height: 8px;
-  background: #ec4899;
+  background: #a855f7;
   border-radius: 3px;
   margin: 0;
   position: absolute;
@@ -510,7 +530,7 @@ template {
   left: 19px; }
 
 .purple {
-  background: #ec4899; }
+  background: #a855f7; }
 
 .lime {
   background: #84cc16; }
@@ -581,7 +601,8 @@ template {
   border-radius: 5px; }
 
 .side-menu__link--active {
-  color: #fff; }
+  color: #fff;
+  background-color: inherit; }
 
 .side-menu__svg--active path {
   stroke: #fff; }
