@@ -16,12 +16,16 @@
   <aside class="side-menu">
     <div class="side-menu__header">
       <div class="side-menu__header-wrapper container">
-        <button class="side-menu__burger" aria-label="кнопка меню">
-          <svg width="38" height="36" viewBox="0 0 38 36" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <button class="side-menu__burger button" aria-label="кнопка меню">
+          <svg class="side-menu__open" width="38" height="36" viewBox="0 0 38 36" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M10 10H28" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             <path d="M10 18H28" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             <path d="M10 26H28" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
+          <svg class="side-menu__close hidden" width="23" height="23" viewBox="0 0 23 23" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.8487 1.37761e-06L0 20.8487L2.15131 23L23 2.15131L20.8487 1.37761e-06Z" fill="currentColor" />
+            <path d="M2.15131 0L0 2.15131L20.8487 23L23 20.8487L2.15131 0Z" fill="currentColor" />
+        </svg>
         </button>
         <a href="#" target="_blank" aria-label="логотип компании">
           <img class="side-menu__logo" src="img/logo.png" width="81" height="31" alt="логотип компании">
@@ -29,22 +33,22 @@
       </div>
     </div>
     <div class="side-menu__input-wrapper container">
-      <input class="side-menu__input" type="text">
+      <input class="side-menu__input" type="text" placeholder="Search">
     </div>
-    <ul class="side-menu__list">
+    <ul class="side-menu__list container">
       <li class="side-menu__item">
-        <a href="#" target="_blank">
+        <a class="side-menu__link" href="blank.html" target="_blank">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M2.5 7.50002L10 1.66669L17.5 7.50002V16.6667C17.5 17.1087 17.3244 17.5326 17.0118 17.8452C16.6993 18.1578 16.2754 18.3334 15.8333 18.3334H4.16667C3.72464 18.3334 3.30072 18.1578 2.98816 17.8452C2.67559 17.5326 2.5 17.1087 2.5 16.6667V7.50002Z"
-              stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M7.5 18.3333V10H12.5V18.3333" stroke="white" stroke-width="1.5" stroke-linecap="round"
+              stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M7.5 18.3333V10H12.5V18.3333" stroke="#71717A" stroke-width="1.5" stroke-linecap="round"
               stroke-linejoin="round" />
           </svg>
           Главная</a>
       </li>
       <li class="side-menu__item">
-        <a href="#" target="_blank">
+        <a class="side-menu__link" href="blank.html" target="_blank">
           <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M4.54169 2.25831L1.66669 7.99998V13C1.66669 13.442 1.84228 13.8659 2.15484 14.1785C2.4674 14.4911 2.89133 14.6666 3.33335 14.6666H16.6667C17.1087 14.6666 17.5326 14.4911 17.8452 14.1785C18.1578 13.8659 18.3334 13.442 18.3334 13V7.99998L15.4584 2.25831C15.3204 1.98064 15.1077 1.74696 14.8442 1.58355C14.5806 1.42014 14.2768 1.33348 13.9667 1.33331H6.03335C5.72328 1.33348 5.41941 1.42014 5.15589 1.58355C4.89237 1.74696 4.67967 1.98064 4.54169 2.25831V2.25831Z"
@@ -53,7 +57,7 @@
           Входящие</a>
       </li>
       <li class="side-menu__item">
-        <a href="#" target="_blank">
+        <a class="side-menu__link" href="blank.html" target="_blank">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M6.66669 5H17.5" stroke="#71717A" stroke-width="1.5" stroke-linecap="round"
               stroke-linejoin="round" />
@@ -71,7 +75,7 @@
           Задачи</a>
       </li>
       <li class="side-menu__item">
-        <a href="#" target="_blank">
+        <a class="side-menu__link" href="blank.html" target="_blank">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M18.3334 10H15L12.5 17.5L7.50002 2.5L5.00002 10H1.66669" stroke="#71717A" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round" />
@@ -79,7 +83,7 @@
           Активность</a>
       </li>
       <li class="side-menu__item">
-        <a href="#" target="_blank">
+        <a class="side-menu__link" href="blank.html" target="_blank">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M14.1666 17.5V15.8333C14.1666 14.9493 13.8155 14.1014 13.1903 13.4763C12.5652 12.8512 11.7174 12.5 10.8333 12.5H4.16665C3.28259 12.5 2.43474 12.8512 1.80962 13.4763C1.1845 14.1014 0.833313 14.9493 0.833313 15.8333V17.5"
@@ -97,22 +101,25 @@
           Команда</a>
       </li>
     </ul>
-    <ul class="side-menu__list bottom-list">
+    <ul class="side-menu__list bottom-list container">
       <li class="bottom-list__item">
         <p class="bottom-list__text">Проекты</p>
       </li>
       <li class="bottom-list__item">
+        <p class="purple"></p>
         <p class="bottom-list__text">Дизайн</p>
       </li>
       <li class="bottom-list__item">
+        <p class="lime"></p>
         <p class="bottom-list__text">Веб</p>
       </li>
       <li class="bottom-list__item">
+        <p class="pink"></p>
         <p class="bottom-list__text">Редактура</p>
       </li>
     </ul>
-    <div class="side-menu__button-wrapper">
-      <button type="button" class="side-menu__project-button">Создать проект</button>
+    <div class="side-menu__button-wrapper container">
+      <button type="button" class="side-menu__project-button button">Создать проект</button>
     </div>
     <div class="side-menu__footer">
       <img class="side-menu__footer-image" src="img/Avatar.jpg" width="40" height="40" alt="фото разработчика">
