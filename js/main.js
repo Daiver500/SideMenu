@@ -47,7 +47,6 @@ const openMenu = () => {
   sideMenuFooter.classList.toggle(`side-menu__footer--active`);
 
 };
-
 burgerButton.addEventListener(`click`, openMenu);
 
 // Tabs
@@ -77,14 +76,13 @@ const showContent = (i = 0) => {
     sideMenuSvgs[i].classList.add(`side-menu__svg--active`);
   } else {
     sideMenuItems[i].classList.add(`side-menu__item-white--active`);
-    sideMenuLinks[i].classList.add(`side-menu__link--active`);
-    sideMenuSvgs[i].classList.add(`side-menu__svg--active`);
+    sideMenuLinks[i].classList.add(`side-menu__link-white--active`);
+    sideMenuSvgs[i].classList.add(`side-menu__svg-white--active`);
   }
 };
 
 hideContent();
 showContent();
-
 
 itemsParent.addEventListener(`click`, (evt) => {
   const target = evt.target.closest(".side-menu__item");

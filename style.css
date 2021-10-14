@@ -444,12 +444,6 @@ template {
   position: relative;
   align-items: center; }
 
-.side-menu__item:hover,
-.bottom-list__item:hover,
-.side-menu__item:focus,
-.bottom-list__item:focus {
-  opacity: 0.5; }
-
 .side-menu__input {
   border: 1px solid #71717a;
   background-color: inherit;
@@ -687,5 +681,10 @@ template {
 
 @media (min-width: 1024px) {
   .side-menu {
-    display: none; } }
+    display: none; }
+  .side-menu__item:hover,
+  .bottom-list__item:hover,
+  .side-menu__item:focus,
+  .bottom-list__item:focus {
+    opacity: 0.5; } }
 

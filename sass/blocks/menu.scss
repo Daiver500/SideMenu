@@ -91,13 +91,6 @@
   align-items: center;
 }
 
-.side-menu__item:hover,
-.bottom-list__item:hover,
-.side-menu__item:focus,
-.bottom-list__item:focus {
-  opacity: 0.5;
-}
-
 .side-menu__input {
   border: 1px solid $light-grey;
   background-color: inherit;
@@ -382,5 +375,12 @@
 @media (min-width: $min-desktop-width) {
   .side-menu {
     display: none;
+  }
+
+  .side-menu__item:hover,
+  .bottom-list__item:hover,
+  .side-menu__item:focus,
+  .bottom-list__item:focus {
+    opacity: 0.5;
   }
 }
