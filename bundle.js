@@ -179,7 +179,7 @@ const checkboxInput = document.querySelector(`.checkbox__input`);
 const logoImages = document.querySelectorAll(`.side-menu__logo-image`);
 const menuActive = document.querySelector(".side-menu__item--active");
 
-const test = () => {
+const listColorChange = () => {
   if (menuActive.classList.contains("side-menu__item--active")) {
     menuActive.classList.add("side-menu__item-white--active");
     menuActive.classList.remove("side-menu__item--active");
@@ -196,7 +196,7 @@ const themeChange = () => {
   sideMenuHeader.classList.toggle(`color`);
   sideMenuFooter.classList.toggle(`color`);
   sideMenu.classList.toggle(`color-body`);
-  test();
+  listColorChange();
   hideContent();
   showContent();
 };
