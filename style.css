@@ -470,7 +470,7 @@ template {
 .side-menu__link {
   font-weight: 400;
   color: #a1a1aa;
-  background-color: #18181b;
+  background-color: inherit;
   border: none;
   align-items: center;
   padding-left: 0;
@@ -478,7 +478,7 @@ template {
 
 .side-menu__svg {
   margin-right: 8px;
-  color: #18181b;
+  color: transparent;
   width: 20px;
   height: 20px; }
 
@@ -622,11 +622,16 @@ template {
   background-color: #ede9fe; }
 
 .side-menu__link--active {
-  color: #fff;
-  background-color: inherit; }
+  color: #fff; }
+
+.side-menu__link-white--active {
+  color: #7c3aed; }
 
 .side-menu__svg--active path {
   stroke: #fff; }
+
+.side-menu__svg-white--active path {
+  stroke: #a855f7; }
 
 .button {
   cursor: pointer; }

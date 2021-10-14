@@ -63,9 +63,11 @@ const hideContent = () => {
   });
   sideMenuLinks.forEach((item) => {
     item.classList.remove(`side-menu__link--active`);
+    item.classList.remove(`side-menu__link-white--active`);
   });
   sideMenuSvgs.forEach((item) => {
     item.classList.remove(`side-menu__svg--active`);
+    item.classList.remove(`side-menu__svg-white--active`);
   });
 };
 
