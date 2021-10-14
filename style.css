@@ -42,7 +42,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
-  min-height: 100vh; }
+  height: 100%; }
 
 .container {
   min-width: 320px;
@@ -367,7 +367,9 @@ template {
 
 .side-menu {
   background-color: #18181b;
-  max-width: 767px; }
+  max-width: 767px;
+  min-height: 100vh;
+  position: relative; }
 
 .side-menu--open {
   max-width: 80px; }
@@ -376,12 +378,14 @@ template {
 .side-menu__footer {
   background-color: #27272a; }
 
+.side-menu__header {
+  margin-bottom: 32px; }
+
 .side-menu__header-wrapper {
   display: flex;
   padding-left: 22px;
   padding-top: 24px;
-  padding-bottom: 24px;
-  margin-bottom: 32px; }
+  padding-bottom: 24px; }
 
 .side-menu__burger {
   width: 38px;
@@ -423,6 +427,29 @@ template {
   min-width: 100%;
   min-height: 36px; }
 
+.side-menu__item,
+.side-menu__link {
+  cursor: pointer;
+  display: flex; }
+
+.bottom-list__item {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 10px;
+  align-items: center; }
+
+.side-menu__item {
+  padding-left: 16px;
+  position: relative;
+  align-items: center; }
+
+.side-menu__item:hover,
+.bottom-list__item:hover,
+.side-menu__item:focus,
+.bottom-list__item:focus {
+  opacity: 0.5; }
+
 .side-menu__input {
   border: 1px solid #71717a;
   background-color: inherit;
@@ -436,35 +463,15 @@ template {
 
 .side-menu__list {
   margin-top: 0;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
   list-style: none;
   position: relative; }
 
-.side-menu__list::after {
-  border: 1px solid #27272a;
-  position: absolute;
-  content: "";
-  min-width: 90%;
-  bottom: -25px; }
+.side-menu__border {
+  border: 1px solid #27272a; }
 
-.side-menu__item,
-.side-menu__link {
-  display: flex; }
-
-.side-menu__item {
-  padding-left: 16px;
-  position: relative;
-  align-items: center; }
-
-.side-menu__item:nth-child(2)::after {
-  content: "";
-  position: absolute;
-  background-image: url("img/mail-dot-icon.svg");
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
-  top: 8px;
-  right: 20px; }
+.side-menu__item:nth-child(2) {
+  justify-content: space-between; }
 
 .side-menu__link {
   font-weight: 400;
@@ -477,23 +484,19 @@ template {
 
 .side-menu__svg {
   margin-right: 8px;
-  color: #18181b; }
+  color: #18181b;
+  width: 20px;
+  height: 20px; }
 
 .side-menu__svg path {
   stroke: #71717a; }
 
 .bottom-list {
-  margin-bottom: 150px; }
+  margin-bottom: 150px;
+  margin-top: 32px; }
 
 .bottom-list::after {
   display: none; }
-
-.bottom-list__item {
-  position: relative;
-  display: flex;
-  cursor: pointer;
-  margin-bottom: 10px;
-  align-items: center; }
 
 .bottom-list__item:first-child {
   padding-left: 48px; }
@@ -517,9 +520,9 @@ template {
   font-weight: 400;
   margin-bottom: 0; }
 
-.purple,
-.lime,
-.pink {
+.bottom-list__purple,
+.bottom-list__lime,
+.bottom-list__pink {
   width: 8px;
   height: 8px;
   background: #a855f7;
@@ -529,13 +532,13 @@ template {
   top: 4px;
   left: 19px; }
 
-.purple {
+.bottom-list__purple {
   background: #a855f7; }
 
-.lime {
+.bottom-list__lime {
   background: #84cc16; }
 
-.pink {
+.bottom-list__pink {
   background: #ec4899; }
 
 .side-menu__button-wrapper {
@@ -544,6 +547,14 @@ template {
 
 .side-menu__project-button {
   padding: 10px 90px 10px 96px;
+  background-color: #7c3aed;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  width: 100%; }
+
+.side-menu__project-button--active {
+  padding: 20px;
   background-color: #7c3aed;
   border: none;
   border-radius: 5px;
@@ -559,6 +570,19 @@ template {
   height: 16px;
   top: 9px;
   left: 77px; }
+
+.side-menu__button-wrapper.side-menu__button-wrapper::before {
+  top: 11px;
+  left: 33px; }
+
+.side-menu__footer {
+  flex-grow: 1; }
+
+.side-menu__footer--active {
+  margin-top: 125px;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px; }
 
 .side-menu__footer-wrapper {
   display: flex;
@@ -600,6 +624,9 @@ template {
   background-color: #3f3f46;
   border-radius: 5px; }
 
+.side-menu__item-white--active {
+  background-color: #ede9fe; }
+
 .side-menu__link--active {
   color: #fff;
   background-color: inherit; }
@@ -615,7 +642,7 @@ template {
   opacity: 0.5; }
 
 .side-menu__checkbox {
-  margin-bottom: 20px; }
+  margin-bottom: 45px; }
 
 .checkbox__label {
   padding-left: 20px;
@@ -652,15 +679,11 @@ template {
 .checkbox__input:checked:focus + .checkbox__box {
   border-radius: 15px; }
 
-.checkbox__text {
-  display: none;
-  padding-left: 50px;
-  padding-top: 7px;
-  font-weight: 400;
-  color: #a1a1aa; }
+.color {
+  background-color: #f9fafb; }
 
-.checkbox__text--active {
-  display: block; }
+.color-body {
+  background-color: #fff; }
 
 @media (min-width: 1024px) {
   .side-menu {

@@ -17,18 +17,22 @@
     <div class="side-menu__header">
       <div class="side-menu__header-wrapper container">
         <button class="side-menu__burger button" aria-label="кнопка меню">
-          <svg class="side-menu__open" width="38" height="36" viewBox="0 0 38 36" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <svg class="side-menu__open side-menu__hide" width="38" height="36" viewBox="0 0 38 36" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
             <path d="M10 10H28" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             <path d="M10 18H28" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             <path d="M10 26H28" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
-          <svg class="side-menu__close hidden" width="23" height="23" viewBox="0 0 23 23" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <svg class="side-menu__close hidden side-menu__hide" width="23" height="23" viewBox="0 0 23 23"
+            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M20.8487 1.37761e-06L0 20.8487L2.15131 23L23 2.15131L20.8487 1.37761e-06Z" fill="currentColor" />
             <path d="M2.15131 0L0 2.15131L20.8487 23L23 20.8487L2.15131 0Z" fill="currentColor" />
-        </svg>
+          </svg>
         </button>
-        <a class="side-menu__logo" href="#" target="_blank" aria-label="логотип компании">
+        <a class="side-menu__logo side-menu__hide" href="#" target="_blank" aria-label="логотип компании">
           <img class="side-menu__logo-image" src="img/logo.png" width="81" height="31" alt="логотип компании">
+          <img class="side-menu__logo-image hidden" src="img/black-logo.png" width="81" height="31"
+            alt="логотип компании">
         </a>
       </div>
     </div>
@@ -37,26 +41,39 @@
     </div>
     <ul class="side-menu__list container">
       <li class="side-menu__item side-menu__item--active">
-        <button type="button" class="side-menu__link side-menu__link--active" href="blank.html" target="_blank">
-          <svg class="side-menu__svg side-menu__svg--active" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <button type="button" class="side-menu__link side-menu__link--active">
+          <svg class="side-menu__svg side-menu__svg--active" width="20" height="20" viewBox="0 0 20 20"
+            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M2.5 7.50002L10 1.66669L17.5 7.50002V16.6667C17.5 17.1087 17.3244 17.5326 17.0118 17.8452C16.6993 18.1578 16.2754 18.3334 15.8333 18.3334H4.16667C3.72464 18.3334 3.30072 18.1578 2.98816 17.8452C2.67559 17.5326 2.5 17.1087 2.5 16.6667V7.50002Z"
               stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             <path d="M7.5 18.3333V10H12.5V18.3333" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
               stroke-linejoin="round" />
           </svg>
-          <span>Главная</span></button>
+          <span class="side-menu__span side-menu__hide">Главная</span></button>
       </li>
       <li class="side-menu__item">
-        <button type="button" class="side-menu__link" href="blank.html" target="_blank">
-          <svg class="side-menu__svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18.3334 10H13.3334L11.6667 12.5H8.33335L6.66669 10H1.66669" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M4.54169 4.25831L1.66669 9.99998V15C1.66669 15.442 1.84228 15.8659 2.15484 16.1785C2.4674 16.4911 2.89133 16.6666 3.33335 16.6666H16.6667C17.1087 16.6666 17.5326 16.4911 17.8452 16.1785C18.1578 15.8659 18.3334 15.442 18.3334 15V9.99998L15.4584 4.25831C15.3204 3.98064 15.1077 3.74696 14.8442 3.58355C14.5806 3.42014 14.2768 3.33348 13.9667 3.33331H6.03335C5.72328 3.33348 5.41941 3.42014 5.15589 3.58355C4.89237 3.74696 4.67967 3.98064 4.54169 4.25831V4.25831Z" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg><span>Входящие</span></button>
+        <button type="button" class="side-menu__link">
+          <svg class="side-menu__svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.3334 10H13.3334L11.6667 12.5H8.33335L6.66669 10H1.66669" stroke="#71717A" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M4.54169 4.25831L1.66669 9.99998V15C1.66669 15.442 1.84228 15.8659 2.15484 16.1785C2.4674 16.4911 2.89133 16.6666 3.33335 16.6666H16.6667C17.1087 16.6666 17.5326 16.4911 17.8452 16.1785C18.1578 15.8659 18.3334 15.442 18.3334 15V9.99998L15.4584 4.25831C15.3204 3.98064 15.1077 3.74696 14.8442 3.58355C14.5806 3.42014 14.2768 3.33348 13.9667 3.33331H6.03335C5.72328 3.33348 5.41941 3.42014 5.15589 3.58355C4.89237 3.74696 4.67967 3.98064 4.54169 4.25831V4.25831Z"
+              stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg><span class="side-menu__span side-menu__hide">Входящие</span></button>
+        <svg class="side-menu__svg-counter" width="20" height="20" viewBox="0 0 20 20" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <rect width="20" height="20" rx="10" fill="#8B5CF6" />
+          <path
+            d="M7.75355 6.72727H6.30824L4.50781 7.86719V9.23082L6.1733 8.18679H6.21591V14H7.75355V6.72727ZM9.48207 14H14.6667V12.7429H11.6127V12.6932L12.6745 11.6527C14.1696 10.2891 14.5708 9.60724 14.5708 8.77983C14.5708 7.51918 13.541 6.62784 11.9821 6.62784C10.4551 6.62784 9.40749 7.54048 9.41104 8.96804H10.8706C10.867 8.27202 11.3074 7.84588 11.9714 7.84588C12.6106 7.84588 13.0865 8.24361 13.0865 8.88281C13.0865 9.46165 12.7314 9.85938 12.0708 10.495L9.48207 12.892V14Z"
+            fill="white" />
+        </svg>
       </li>
       <li class="side-menu__item">
-        <button type="button" class="side-menu__link" href="blank.html" target="_blank">
-          <svg class="side-menu__svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <button type="button" class="side-menu__link">
+          <svg class="side-menu__svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
             <path d="M6.66669 5H17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
               stroke-linejoin="round" />
             <path d="M6.66669 10H17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -70,19 +87,21 @@
             <path d="M2.5 15H2.50833" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
               stroke-linejoin="round" />
           </svg>
-          <span>Задачи</span></button>
+          <span class="side-menu__span side-menu__hide">Задачи</span></button>
       </li>
       <li class="side-menu__item">
-        <button type="button" class="side-menu__link" href="blank.html" target="_blank">
-          <svg class="side-menu__svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <button type="button" class="side-menu__link">
+          <svg class="side-menu__svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
             <path d="M18.3334 10H15L12.5 17.5L7.50002 2.5L5.00002 10H1.66669" stroke="currentColor" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round" />
           </svg>
-          <span>Активность</span></button>
+          <span class="side-menu__span side-menu__hide">Активность</span></button>
       </li>
       <li class="side-menu__item">
-        <button type="button" class="side-menu__link" href="blank.html" target="_blank">
-          <svg class="side-menu__svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <button type="button" class="side-menu__link">
+          <svg class="side-menu__svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
             <path
               d="M14.1666 17.5V15.8333C14.1666 14.9493 13.8155 14.1014 13.1903 13.4763C12.5652 12.8512 11.7174 12.5 10.8333 12.5H4.16665C3.28259 12.5 2.43474 12.8512 1.80962 13.4763C1.1845 14.1014 0.833313 14.9493 0.833313 15.8333V17.5"
               stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -96,44 +115,46 @@
               d="M13.3333 2.60834C14.0503 2.79192 14.6858 3.20892 15.1397 3.7936C15.5935 4.37827 15.8398 5.09736 15.8398 5.8375C15.8398 6.57765 15.5935 7.29674 15.1397 7.88141C14.6858 8.46609 14.0503 8.88309 13.3333 9.06667"
               stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
-          <span>Команда</span></button>
+          <span class="side-menu__span side-menu__hide">Команда</span></button>
       </li>
     </ul>
+    <div class="container">
+      <div class="side-menu__border"></div>
+    </div>
     <ul class="bottom-list container">
       <li class="bottom-list__item">
-        <p class="bottom-list__text">Проекты</p>
+        <p class="bottom-list__text side-menu__hide">Проекты</p>
       </li>
       <li class="bottom-list__item">
-        <p class="bottom-list__purple"></p>
-        <p class="bottom-list__text">Дизайн</p>
+        <p class="bottom-list__purple side-menu__hide"></p>
+        <p class="bottom-list__text side-menu__hide">Дизайн</p>
       </li>
       <li class="bottom-list__item">
-        <p class="bottom-list__lime"></p>
-        <p class="bottom-list__text">Веб</p>
+        <p class="bottom-list__lime side-menu__hide"></p>
+        <p class="bottom-list__text side-menu__hide">Веб</p>
       </li>
       <li class="bottom-list__item">
-        <p class="bottom-list__pink"></p>
-        <p class="bottom-list__text">Редактура</p>
+        <p class="bottom-list__pink side-menu__hide"></p>
+        <p class="bottom-list__text side-menu__hide">Редактура</p>
       </li>
     </ul>
     <div class="side-menu__checkbox container checkbox">
       <label class="checkbox__label">
         <input class="checkbox__input" type="checkbox" name="door" checked />
         <span class="checkbox__box " tabindex="0"></span>
-        <span class="checkbox__text checkbox__text--active">Светлая тема</span>
-        <span class="checkbox__text">Тёмная тема</span>
       </label>
     </div>
     <div class="side-menu__button-wrapper container">
-      <button type="button" class="side-menu__project-button button"><span>Создать проект</span></button>
+      <button type="button" class="side-menu__project-button button"><span class="side-menu__hide">Создать
+          проект</span></button>
     </div>
     <div class="side-menu__footer">
       <div class="side-menu__footer-wrapper container">
-      <img class="side-menu__footer-image" src="img/Avatar.jpg" width="40" height="40" alt="фото разработчика">
-      <div class="side-menu__footer-info">
-        <p class="side-menu__footer-title">Михаил Воробьев</p>
-        <p class="side-menu__footer-text">Разработчик</p>
-      </div>
+        <img class="side-menu__footer-image" src="img/Avatar.jpg" width="40" height="40" alt="фото разработчика">
+        <div class="side-menu__footer-info side-menu__hide">
+          <p class="side-menu__footer-title">Михаил Воробьев</p>
+          <p class="side-menu__footer-text">Разработчик</p>
+        </div>
       </div>
     </div>
   </aside>
