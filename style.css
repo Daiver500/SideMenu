@@ -448,7 +448,8 @@ template {
   border: 1px solid #71717a;
   background-color: inherit;
   border-radius: 5px;
-  padding-left: 40px; }
+  padding-left: 40px;
+  color: #fff; }
 
 .side-menu__input--small {
   min-width: 10px;
