@@ -35,3 +35,13 @@ body {
   font-weight: 500;
   height: 100%;
 }
+
+.page-header {
+  display: none;
+}
+
+@media (min-width: $min-desktop-width) {
+  .page-header {
+    display: block;
+  }
+}
